@@ -1,0 +1,22 @@
+:page-partial:
+:numbered:
+=== Other libraries
+
+:!numbered:
+==== Swagger2
+
+Use `@EnableSwagger2` on the Across application class to activate Swagger2 support on all controllers in any module.
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Full support
+|Verified
+|none
+|===
+
+.Autoconfiguration classes
+* ``Swagger2AutoConfiguration`` - added by Across autoconfigure project

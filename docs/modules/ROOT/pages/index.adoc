@@ -1,0 +1,25 @@
+[[spring-boot]]
+= Across - Spring Boot compatibility
+:toc: left
+:toc-title: Spring Boot compatibility
+:toclevels: 3
+:sectnums:
+:chapter-number: 0
+:docinfo1:
+include::variables.adoc[]
+
+include::chap-auto-configuration.adoc[]
+
+[[spring-boot-starters]]
+== Starters and libraries
+Lists the support status of different Spring Boot starters and libraries.
+Most of these are configured and tested in the {git-across-autoconfigure}[Across auto-configure project].
+
+include::chap-official-starters.adoc[]
+
+include::chap-contributed-starters.adoc[]
+
+include::chap-other-libraries.adoc[]
+
+// unsupported configuration classes
+include::chap-not-supported.adoc[]

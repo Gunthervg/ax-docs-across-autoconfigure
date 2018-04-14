@@ -1,0 +1,38 @@
+:page-partial:
+:numbered:
+=== Contributed starters
+
+:!numbered:
+==== Spring Boot Admin
+https://github.com/codecentric/spring-boot-admin
+
+Add `@EnableAdminServer` on your application class to create a Spring Boot admin in your application.
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Full support
+|To be verified
+|none
+|===
+
+==== Spring Boot Admin Client
+https://github.com/codecentric/spring-boot-admin
+
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Full support
+|Verified
+|none
+|===
+
+.Autoconfiguration classes
+* `SpringBootAdminClientAutoConfiguration`

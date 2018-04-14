@@ -1,0 +1,47 @@
+:page-partial:
+:numbered:
+=== Spring Cloud
+The following chapter lists the support for specific projects under the Spring Cloud umbrella.
+
+:!numbered:
+==== Spring Cloud Context
+The bootstrap `ApplicationContext`, `@RefreshScope` as well as the relevant Actuator endpoints (`/restart`, `/refresh` ...) are supported.
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Full support
+|Verified
+|The lifecycle endpoint (`/pause` and `/resume` is of little use in an Across application.
+|===
+
+.Autoconfiguration classes
+* `org.springframework.cloud.client.CommonsClientAutoConfiguration`
+* `org.springframework.cloud.commons.util.UtilAutoConfiguration`
+* `org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration`
+* `org.springframework.cloud.autoconfigure.RefreshAutoConfiguration`
+* `org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration`
+* adapters in across-autoconfigure:
+** `com.foreach.across.autoconfigure.CloudRefreshAutoConfigurationAdapter`
+
+==== Spring Cloud Config
+Both the use of Spring Cloud Config Client and Server (`@EnableConfigServer`) is supported.
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Full support
+|Verified
+|none
+|===
+
+.Autoconfiguration classes
+* `org.springframework.cloud.config.client.ConfigClientAutoConfiguration`
+* `org.springframework.cloud.config.server.config.ConfigServerAutoConfiguration`
+* `org.springframework.cloud.config.server.config.EncryptionAutoConfiguration`

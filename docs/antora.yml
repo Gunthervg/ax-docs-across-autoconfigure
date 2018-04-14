@@ -1,0 +1,5 @@
+name: across-autoconfigure
+title: Autoconfiguration Support
+version: 1.0.0
+nav:
+- modules/ROOT/nav.adoc

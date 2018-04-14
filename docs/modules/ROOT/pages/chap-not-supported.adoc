@@ -1,0 +1,20 @@
+:page-partial:
+:numbered:
+== Not supported
+The following is a list of common auto-configuration classes that are not automatically enabled, but explicitly excluded instead.
+They are not added to the application configuration and none of the standard modules include them.
+
+In some cases, these can still be added directly using an `@Import` statement inside an application or module.
+When doing so however, you should be aware of possible conflicts with other Across features.
+
+`org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration`::
+Across always packages Liquibase but uses installers instead of a default changeset xml.
+Looks like the auto-configuration breaks in this case.
+
+`org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration`::
+AcrossWebModule provides its own Thymeleaf configuration that differs slightly from the Spring Boot default.
+Templates are expected to be in `classpath:/views/*` with `html` extension.
+
+`org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration`::
+  Across has its own message source mechanism for modules.
+  The default Spring Boot message sources - configurable using `spring.messages` properties - are not supported by default.
