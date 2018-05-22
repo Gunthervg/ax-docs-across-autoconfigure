@@ -244,27 +244,5 @@ In a regular Spring Boot application, it would be the package that contains the 
 [discrete]
 [[AcrossBoostrapConfigurer]]
 ==== AcrossBootstrapConfigurer
-You can implement the `AcrossBootstrapConfigurer` interface to alter the module and Across context configuration that is to be started.
-Auto-configuration compatibility adapters often implement this interface to inject the configurations in the relevant modules.
 
-.Example AcrossBootstrapConfigurer
-[source,java]
-----
-@Configuration
-public class AcrossWebSocketConfiguration implements AcrossBootstrapConfigurer
-{
-	@Override
-	public void configureModule( ModuleBootstrapConfig moduleConfiguration ) {
-	    // always expose WebSocketConfigurer
-		moduleConfiguration.expose( WebSocketConfigurer.class );
-	}
-
-	@Override
-	public void configureContext( AcrossBootstrapConfig contextConfiguration ) {
-	    // inject configuration in the last module so it can pick up all WebSocketConfigurer instances
-		contextConfiguration.extendModule( CONTEXT_POSTPROCESSOR_MODULE, DelegatingWebSocketConfiguration.class );
-	}
-}
-----
-
-:numbered:
+See xref:across:developing-applications:extend-module-configuration.adoc[Extend module configuration]
