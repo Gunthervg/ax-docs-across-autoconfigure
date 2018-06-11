@@ -1,0 +1,299 @@
+=  Official Spring Boot starters
+{spring-boot-docs}#using-boot-starter
+
+:!numbered:
+== ActiveMQ
+https://spring.io/guides/gs/messaging-jms/
+
+Under investigation.
+
+== Actuator
+https://spring.io/guides/gs/actuator-service/
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Full support
+|To be verified
+|none
+|===
+
+Endpoints, metrics, health indicators from all modules will automatically be exposed and detected.
+
+== AMQP
+https://projects.spring.io/spring-amqp/
+
+Under investigation.
+
+== AOP
+
+AspectJ support is only enabled automatically in the application module.
+Shared modules should manually add a configuration with `@EnableAspectJAutoProxy` in their `ApplicationContext` if they want to use the `@Aspect` annotation.
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Application support
+|Verified
+|none
+|===
+
+.Auto-configuration classes
+* ``AopAutoConfiguration``
+
+== Artemis
+
+Currently not supported, to be investigated.
+
+== Batch
+
+Under investigation.
+There is currently an Across standard module https://across.foreach.be/modules/SpringBatchModule that will most likely be discontinued in favour of auto-configuration.
+
+== Cache
+
+Under investigation.
+
+== Freemarker
+
+Currently not supported, to be investigated.
+
+== Groovy Templates
+
+Currently not supported, to be investigated.
+
+== HATEOAS
+
+Hypermedia should be correctly supported.
+Spring Boot Data Rest includes hateoas, see <<spring-boot-starter-data-rest,Spring Boot Starter Data Rest>>.
+
+.Auto-configuration classes:
+* ``HypermediaAutoConfiguration``
+
+== Integration
+
+Currently not supported, to be investigated.
+
+== JDBC
+
+Under investigation.
+
+== Jersey
+
+Currently not supported, to be investigated.
+
+== Jetty
+
+Auto-configuration classes:
+
+* ``JettyEmbeddedServletContainerFactory``
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Full support
+|Verified
+|none
+|===
+
+== JOOQ
+
+Currently not supported, to be investigated.
+
+== JTA Atomikos
+
+Currently not supported, to be investigated.
+
+== JTA Bitronix
+
+Currently not supported, to be investigated.
+
+== JTA Narayana
+
+Currently not supported, to be investigated.
+
+== Log4J2
+
+Currently not supported, to be investigated.
+
+== Logging
+
+Auto-configuration classes:
+
+* ``LoggingApplicationListener``
+
+LoggingApplicationListener
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Full support
+|Verified
+|none
+|===
+
+== Mail
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Full support
+|Verified
+|none
+|===
+
+.Auto-configuration classes
+* ``MailSenderAutoConfiguration``
+* ``MailSenderValidatorAutoConfiguration``
+
+== Mobile
+
+Currently not supported, to be investigated.
+There is a https://across.foreach.be/modules/SpringMobileModule that integrates with AcrossWebModule to enable Spring mobile support.
+
+== Mustache
+
+Currently not supported, to be investigated.
+
+== Remote Shell
+
+Not supported.
+Adding support is not planned as Remote Shell is removed in Spring Boot 2.0.0.
+
+== Security
+
+Not supported, add the link:{spring-security-module-url}[SpringSecurityModule] to your application instead.
+It supports most Spring Boot security features (with slight variations), and allows other modules to add security configuration.
+
+== Spring Social
+
+[discrete]
+=== Facebook
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Application support
+|Verified
+|none
+|===
+
+[discrete]
+=== Linkedin
+
+Under investigation.
+
+[discrete]
+=== Twitter
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Application support
+|Verified
+|none
+|===
+
+== Test
+
+Fully supported.
+
+== Thymeleaf
+
+Not supported.
+AcrossWebModule configures its own Thymeleaf configuration for template support in modules.
+Thymeleaf is always enabled in any application with the AcrossWebModule.
+
+== Tomcat
+
+Auto-configuration classes:
+
+* ``TomcatEmbeddedServletContainerFactory``
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Full support
+|Verified
+|none
+|===
+
+== Undertow
+
+Auto-configuration classes:
+
+* ``UndertowEmbeddedServletContainerFactory``
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Full support
+|Verified
+|none
+|===
+
+== Validation
+
+Bean Validation 1.1 method validation is automatically activated in all modules.
+A single `Validator` bean will be available by default.
+In case of a web setup, it will also be registered as the *mvcValidator* bean.
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Full support
+|Verified
+|none
+|===
+
+.Auto-configuration classes
+* ``ValidationAutoConfiguration``
+
+== Web Services
+
+Currently not supported, to be investigated.
+
+== Web
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Full support
+|To be verified
+|none
+|===
+
+== Websocket
+
+Websocket support is automatically enabled if AcrossWebModule is present, the starter is on the classpath, and there is either a `WebSocketConfigurer` or `WebSocketMessageBrokerConfigurer` in any of the modules.

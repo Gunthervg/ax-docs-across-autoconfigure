@@ -1,25 +1,56 @@
-[[spring-boot]]
-= Across - Spring Boot compatibility
-:toc: left
-:toc-title: Spring Boot compatibility
-:toclevels: 3
-:sectnums:
-:chapter-number: 0
-:docinfo1:
-include::variables.adoc[]
+= Across & Spring Boot auto-configuration support
 
-include::chap-auto-configuration.adoc[]
+[abstract]
+--
+You can use `@AcrossApplication` to execute as a Spring Boot application and use auto-configuration of your application infrastructure.
+However not all auto-configuration classes are supported in an Across application.
 
-[[spring-boot-starters]]
-== Starters and libraries
-Lists the support status of different Spring Boot starters and libraries.
-Most of these are configured and tested in the {git-across-autoconfigure}[Across auto-configure project].
+This document explains why that is and how developers can provide compatibility adapters for existing configurations.
+--
 
-include::chap-official-starters.adoc[]
+== Spring Boot auto-configuration compatibility
 
-include::chap-contributed-starters.adoc[]
+Most Spring related libraries are fine-tuned to easily work in a single Spring `ApplicationContext`.
+This is also very much the case with the default Spring Boot auto-configuration classes.
 
-include::chap-other-libraries.adoc[]
+An Across application has a more complex `ApplicationContext` hierarchy:
 
-// unsupported configuration classes
-include::chap-not-supported.adoc[]
+* every module has its own `ApplicationContext`: *module level*
+* the Across context has single `ApplicationContext` that is the parent of all modules: *Across context level*
+* in case of executing as Spring Boot (using `@AcrossApplication`) there is an additional `ApplicationContext` that is the parent of the Across context: *application (infrastructure) level*
+
+NOTE: There is a difference between the *application* and the *application module*.
+The latter is a single module in the Across context.
+Please read the chapter on xref:across:developing-applications:creating-an-application/project-structure.adoc[Across application project structure] if you do not clearly understand this difference.
+
+Because of the hierarchy, visibility, dependencies and creation order of beans are more important.
+This helps you define clearly dependant modules, but it adds additional complexity compared to a single `ApplicationContext` application.
+
+Default Spring Boot auto-configuration classes only work in the top-level `ApplicationContext`, the application level.
+Often we require them to activate behaviour in modules, as such they usually do not work out-of-the-box and need to be adapted.
+
+Across provides some ways to xref:adding-auto-configuration-support.adoc[add auto-configuration compatibility] for Across applications.
+This can allow developers to use the same starters and libraries in an Across application, often with no (or very little) difference.
+
+Not every library or auto-configuration works as easily in an Across application.
+The Across auto-configure artifact contains compatibility configuration for common starters and libraries, to ease the transition for developers.
+
+[[artifact]]
+== Across auto-configure project
+
+The Across auto-configure project adds Across support for many commonly used Spring Boot starters.
+The adapters are available in the separate `across-autoconfigure` artifact.
+This artifact is part of the Across Platform and usually added to any Across application.
+
+[source,xml,indent=0]
+[subs="verbatim,quotes,attributes"]
+----
+<dependency>
+    <groupId>com.foreach.across</groupId>
+    <artifactId>across-autoconfigure</artifactId>
+</dependency>
+----
+
+The chapter on xref:starters/index.adoc[supported starters and libraries] gives an overview of what is supported by the auto-configure artifact.
+
+

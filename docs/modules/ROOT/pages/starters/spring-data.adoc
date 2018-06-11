@@ -1,0 +1,216 @@
+= Spring Data starters
+The following chapter lists the support for specific projects related to Spring Data.
+
+
+== Data Cassandra
+
+Auto-configuration of Spring Data Cassandra repositories is supported in the application module only.
+Project url: https://projects.spring.io/spring-data-cassandra/
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Application support
+|Verified
+|none
+|===
+
+.Auto-configuration classes
+* ``CassandraAutoConfiguration``: application configuration
+* ``CassandraDataAutoConfiguration``: application module
+* ``CassandraRepositoriesAutoConfiguration``: application module
+
+== Data Couchbase
+https://projects.spring.io/spring-data-couchbase/
+
+Auto-configuration classes:
+
+* ``CouchbaseAutoConfiguration``
+* ``CouchbaseDataAutoConfiguration``
+* ``CouchbaseRepositoriesAutoConfiguration``
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Application support
+|Verified
+|known issues
+|===
+
+Known issues:
+
+* CouchbaseMock used for testing doesn't fully support spring data repositories
+
+== Data Elasticsearch
+https://projects.spring.io/spring-data-elasticsearch/
+
+Auto-configuration classes:
+
+* ``ElasticsearchAutoConfiguration``
+* ``ElasticsearchDataAutoConfiguration``
+* ``ElasticsearchRepositoriesAutoConfiguration``
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Application support
+|Verified
+|none
+|===
+
+== Data Gemfire
+
+Currently not supported, to be investigated.
+
+== Data JPA
+
+The regular Spring Boot Data JPA starter enables JPA entities and Spring Data JPA repositories in the application module only.
+If you need support for JPA for multiple modules, you should look at the link:{across-hibernate-module-url}[AcrossHibernateJpaModule] instead.
+The latter is a transparent alternative for the application module support, taking over all tasks of the regular starter.
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Application support
+|Verified
+|none
+|===
+
+.Auto-configuration classes
+* `org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration`
+* `org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration`
+* `org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration`
+* `org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration`
+
+== Data LDAP
+https://projects.spring.io/spring-data-ldap/
+
+Auto-configuration classes:
+
+* ``LdapAutoConfiguration``
+* ``EmbeddedLdapAutoConfiguration``
+* ``LdapDataAutoConfiguration``
+* ``LdapRepositoriesAutoConfiguration``
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Application support
+|Verified
+|none
+|===
+
+== Data MongoDB
+https://projects.spring.io/spring-data-mongodb/
+
+Auto-configuration classes:
+
+* ``MongoAutoConfiguration``
+* ``EmbeddedMongoAutoConfiguration``
+* ``MongoDataAutoConfiguration``
+* ``MongoRepositoriesAutoConfiguration``
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Application support
+|Verified
+|none
+|===
+
+== Data Neo4j
+https://projects.spring.io/spring-data-neo4j/
+
+Auto-configuration classes:
+
+* ``Neo4jDataAutoConfiguration``
+* ``Neo4jRepositoriesAutoConfiguration``
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Application support
+|Verified
+|none
+|===
+
+== Data Redis
+https://projects.spring.io/spring-data-redis/
+
+Auto-configuration classes:
+
+* ``RedisAutoConfiguration``
+* ``RedisRepositoriesAutoConfiguration``
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Application support
+|Verified
+|none
+|===
+
+[[spring-boot-starter-data-rest]]
+== Data REST
+
+https://projects.spring.io/spring-data-rest/
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Full support
+|Verified
+|
+|===
+
+
+.Auto-configuration classes:
+
+* ``RepositoryRestMvcAutoConfiguration``
+* ``HypermediaAutoConfiguration``
+
+== Data SOLR
+https://projects.spring.io/spring-data-solr/
+
+Auto-configuration classes:
+
+* ``SolrAutoConfiguration``
+* ``SolrRepositoriesAutoConfiguration``
+
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Application support
+|Verified
+|none
+|===

@@ -1,6 +1,5 @@
-:page-partial:
-:numbered:
-== Not supported
+= Unsupported auto-configuration classes
+
 The following is a list of common auto-configuration classes that are not automatically enabled, but explicitly excluded instead.
 They are not added to the application configuration and none of the standard modules include them.
 

@@ -1,0 +1,42 @@
+= Supported starters and libraries
+Lists the support status of different Spring Boot starters and libraries.
+Most of these are configured and tested in the {git-across-autoconfigure}[Across auto-configure project].
+
+For every library/Spring Boot starter mentioned in this document, there are 2 support indicators:
+
+== Support level
+
+Indicates the level of support in a multi-module Across application.
+
+Not supported::
+  No auto-configuration possible.
+
+Full support::
+  Virtually no difference compared to a regular Spring Boot application.
+  Support is automatic in all modules configured in an application.
+  Common case: web controllers, actuator endpoints...
+
+Application support::
+  Auto-configuration works as expected for an Across application.
+  Infrastructure is usually configured on the application level, automatic support is only activated in the application module.
+  Shared modules require manual configuration.
+  Common case: Spring Data repositories
+
+Partial support::
+  Auto-configuration is partially supported.
+  Additional manual configuration is still required.
+
+== Support status
+
+Indicates the status of the support for that starter/library.
+This is more of an indication of the work in progress.
+
+Expected::
+  Currently not yet available.
+
+To be verified::
+  Auto-configuration available but not yet - or only partially - verified.
+  Some cases might not yet work as expected.
+
+Verified::
+  Support level is available as indicated.
