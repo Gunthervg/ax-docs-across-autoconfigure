@@ -48,7 +48,7 @@ It can be used to move configuration classes to that need to rely on components 
 
 If no configuration has been added to the module, it will be disabled and not bootstrap.
 
-[[across-configuration]]
+[#across-configuration]
 == META-INF/across.configuration
 The `across.configuration` file allows you to move auto-configuration, exposed additional beans and provide alternative configuration classes.
 Every JAR file can contain a single `across.configuration` and all data from them will be merged together.

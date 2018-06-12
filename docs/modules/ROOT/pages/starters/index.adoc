@@ -1,6 +1,6 @@
 = Supported starters and libraries
+
 Lists the support status of different Spring Boot starters and libraries.
-Most of these are configured and tested in the {git-across-autoconfigure}[Across auto-configure project].
 
 For every library/Spring Boot starter mentioned in this document, there are 2 support indicators:
 

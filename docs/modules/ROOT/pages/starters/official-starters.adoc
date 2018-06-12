@@ -175,7 +175,7 @@ Adding support is not planned as Remote Shell is removed in Spring Boot 2.0.0.
 
 == Security
 
-Not supported, add the link:{spring-security-module-url}[SpringSecurityModule] to your application instead.
+Not supported, add the link:{url-SpringSecurityModule}[SpringSecurityModule] to your application instead.
 It supports most Spring Boot security features (with slight variations), and allows other modules to add security configuration.
 
 == Spring Social

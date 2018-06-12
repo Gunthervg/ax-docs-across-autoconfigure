@@ -74,7 +74,7 @@ Currently not supported, to be investigated.
 == Data JPA
 
 The regular Spring Boot Data JPA starter enables JPA entities and Spring Data JPA repositories in the application module only.
-If you need support for JPA for multiple modules, you should look at the link:{across-hibernate-module-url}[AcrossHibernateJpaModule] instead.
+If you need support for JPA for multiple modules, you should look at the link:{url-AcrossHibernateModule}[AcrossHibernateJpaModule] instead.
 The latter is a transparent alternative for the application module support, taking over all tasks of the regular starter.
 
 [cols="1,1,4",opts=header]
