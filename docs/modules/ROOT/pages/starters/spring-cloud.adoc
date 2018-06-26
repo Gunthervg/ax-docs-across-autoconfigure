@@ -45,3 +45,22 @@ Both the use of Spring Cloud Config Client and Server (`@EnableConfigServer`) is
 * `org.springframework.cloud.config.client.ConfigClientAutoConfiguration`
 * `org.springframework.cloud.config.server.config.ConfigServerAutoConfiguration`
 * `org.springframework.cloud.config.server.config.EncryptionAutoConfiguration`
+
+== Spring Cloud OpenFeign
+OpenFeign in combination with Hystrix callbacks are fully supported.
+[cols="1,1,4",opts=header]
+|===
+|Support level
+|Status
+|Remarks
+
+|Full support
+|Verified
+|@EnableFeignClients should be configured on desired Across modules. It's not applicated to the root ApplicationContext.
+|===
+
+.Auto-configuration classes
+* `org.springframework.cloud.netflix.feign.FeignAutoConfiguration`
+* `org.springframework.cloud.netflix.feign.encoding.FeignAcceptGzipEncodingAutoConfiguration`
+* `org.springframework.cloud.netflix.feign.encoding.FeignContentGzipEncodingAutoConfiguration`
+* `org.springframework.cloud.netflix.hystrix.HystrixAutoConfiguration`
