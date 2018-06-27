@@ -48,6 +48,7 @@ Both the use of Spring Cloud Config Client and Server (`@EnableConfigServer`) is
 
 == Spring Cloud OpenFeign
 OpenFeign in combination with Hystrix callbacks are fully supported.
+
 [cols="1,1,4",opts=header]
 |===
 |Support level
@@ -56,7 +57,8 @@ OpenFeign in combination with Hystrix callbacks are fully supported.
 
 |Full support
 |Verified
-|@EnableFeignClients should be configured on desired Across modules. It's not applicated to the root ApplicationContext.
+|`@EnableFeignClients` should be added to every Across module that wishes to use Feign clients.
+It is not supported on the application configuration.
 |===
 
 .Auto-configuration classes
